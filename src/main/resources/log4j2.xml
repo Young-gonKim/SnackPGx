@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Logging configuration for SnackPGx.
+
+  Apache POI 5 logs through log4j2. Three of the bundled workbooks
+  (settings.xlsx, settings_WGS.xlsx, phenotype_table.xlsx) carry a dangling
+  relationship to a sharedStrings part that does not exist; their text is
+  stored inline, so the data reads correctly, but POI logs an ERROR
+  ("Skipped invalid entry /xl/sharedStrings.xml") for each open. That noise is
+  harmless — genuine read failures still surface as exceptions in the app's
+  own try/catch blocks — so POI's logger is raised to FATAL here.
+-->
+<Configuration status="OFF">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_ERR">
+            <PatternLayout pattern="%d{HH:mm:ss} %-5level %logger{1} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.apache.poi" level="FATAL"/>
+        <Root level="WARN">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

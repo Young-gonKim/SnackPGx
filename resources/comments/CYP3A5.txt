@@ -1,0 +1,17 @@
+- COMMENTS
+1. CYP3A5 is a drug-metabolizing enzyme whose expression varies by genotype and most
+   notably affects the metabolism of tacrolimus.
+
+2. The above results were prepared using the Gene-specific Information Tables from ClinPGx.
+   (https://www.clinpgx.org, downloaded 2026.6.3)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: CYP3A5 gene on chromosome 7q22.1
+  METHOD: Next-generation sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

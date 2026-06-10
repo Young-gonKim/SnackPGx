@@ -1,0 +1,35 @@
+- COMMENTS
+1. UGT1A1 is a Phase II enzyme involved in the metabolism of SN-38, the active
+   metabolite of irinotecan; enzyme activity is determined by the UGT1A1 genotype.
+   In patients carrying a genotype that reduces UGT1A1 activity, the risk of
+   dose-limiting toxicities such as myelosuppression and diarrhea increases during
+   irinotecan therapy.
+   (Ref. Pharmgenomics Pers Med. 2017;10:61-8.)
+
+   In particular, a 30% dose reduction has been recommended during irinotecan therapy
+   for patients with a poor metabolizer genotype, whereas dose reduction is not
+   recommended for intermediate metabolizers or normal metabolizers.
+   (Ref. Eur J Hum Genet. 2023;31(9):982-7)
+
+2. The *6, *27, and *28 allele frequencies in Koreans are 21.3%, 1.4%, and 12.7%,
+   respectively.
+   (Clin Chem. 2003;49(12):2078-81, Ann Lab Med. 2020:40(3):281-3)
+
+3. The above results were prepared using the Gene-specific Information Tables from
+   ClinPGx. (https://www.clinpgx.org/page/ugt1a1RefMaterials, downloaded 2025.10.20)
+
+4. Note that genetic factors not identified by this assay and non-genetic factors such
+   as drug-drug interactions may affect drug response. Therefore, comprehensive
+   interpretation of the results and determination of the application policy are required.
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE:  UGT1A1 on Chromosome 2q37
+  TARGET ALLELES: *6, *27, *28, *36, *37
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

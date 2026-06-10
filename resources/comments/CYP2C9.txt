@@ -1,0 +1,29 @@
+- COMMENTS
+  1. CYP2C9 is a hepatic enzyme involved in the metabolism of drugs such as warfarin,
+     phenytoin, and sulfonylureas. Enzyme activity is determined by the CYP2C9 genotype.
+
+  2. The CYP2C9 *1 and *3 allele frequencies in Koreans have been reported as 0.934 and
+     0.060, respectively. (* Ref. Br J Clin Pharmacol 2005;60:418-22)
+
+  3. The above results were prepared using the Gene-specific Information Tables from
+     ClinPGx. (https://www.clinpgx.org/page/cyp2c9RefMaterials, downloaded 2025.10.20)
+
+  4. Note that genetic factors not identified by this assay and non-genetic factors such
+     as drug-drug interactions may affect drug response. Therefore, comprehensive
+     interpretation of the results and determination of the application policy are
+     required.
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- CLINICAL INFORMATION:
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: CYP2C9
+  TARGET ALLELES: *2, *3, *4, *5, *6, *8, *9, *11, *12, *13, *14, *15, *16,
+                  *23, *25, *26, *28, *29, *30, *31, *33, *42, *55
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

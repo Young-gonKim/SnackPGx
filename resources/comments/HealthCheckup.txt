@@ -1,0 +1,12 @@
+▣ TEST INFORMATION AND FINDINGS
+Coverage
+Mean depth of coverage (X) : X
+
+Test Information
+SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+TARGET ENRICHMENT METHOD: Hybridization capture-based enrichment (SMC PGx panel)
+SEQUENCING PLATFORM: Next-generation sequencing (Illumina NovaSeq/NextSeq)
+REFERENCE GENOME: hg38/GRCh38
+Bioinformatic pipeline: SnackPGx {VERSION}
+Database version: {DBVERSION}
+NOTE: This test was developed and its performance characteristics determined by the Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

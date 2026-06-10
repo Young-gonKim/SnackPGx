@@ -1,0 +1,33 @@
+- COMMENTS
+  1. MTHFR is a key enzyme involved in intracellular folate homeostasis/metabolism,
+     converting 5,10-methylenetetrahydrofolate into 5-methyltetrahydrofolate. When the
+     MTHFR c.665C>T (legacy name C677T) polymorphism is present, MTHFR enzyme activity
+     is reduced.
+  2. In particular, when the homozygous c.665C>T polymorphism (TT homozygote) is present,
+     the association with hyperhomocysteinemia is higher than in the wild type, so
+     measurement of blood homocysteine concentration is recommended. However, including
+     MTHFR genotyping in the routine evaluation of thrombophilia or pregnancy loss is not
+     recommended. (ref. 2013 ACMG Practice guideline)
+     In addition, associations with the efficacy or adverse effects of fluoropyrimidine
+     (5-FU) and antifolate (methotrexate) drug therapy have been reported, but the level
+     of evidence has not been clearly established, and no genotype-based treatment
+     guideline has been recommended.
+  3. In Koreans, the frequencies of the c.665C>T genotype are reported as 35.8% for CC
+     homozygous, 49.5% for CT heterozygous, and 14.7% for TT homozygous.
+     (ref. J Korean Med Sci 2004; 19: 209-13)
+  4. Note that genetic factors not identified by this assay and non-genetic factors such
+     as drug-drug interactions may affect drug response. Therefore, comprehensive
+     interpretation of the results and determination of the application policy are
+     required.
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: MTHFR gene on chromosome 1p36.22
+  TARGET ALLELES: rs1801133 (c.665C>T), rs1801131 (c.1286A>C)
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

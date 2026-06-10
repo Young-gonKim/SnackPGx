@@ -1,0 +1,124 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+    id 'org.beryx.runtime' version '1.13.1'
+}
+
+group = 'snackpgx'
+version = '2.0.0'
+
+// The project lives inside a Google Drive synced folder, which intermittently
+// locks files under build/ (causing "Unable to delete directory"). Redirect all
+// build output to a local, non-synced directory to avoid the lock and the
+// constant re-syncing of throwaway class files.
+layout.buildDirectory = file("${System.getProperty('user.home')}/.snackpgx-build/SnackPGx17")
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    // Use a JavaFX-free JDK (Temurin/Adoptium). JavaFX is supplied by the
+    // openjfx Gradle plugin as class-path jars; if the toolchain JDK ALSO
+    // bundled JavaFX (e.g. Liberica Full), Eclipse/ecj reports
+    // "package javafx.* is accessible from more than one module". jlink here
+    // needs only java.* modules, so a vanilla JDK still packages fine.
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.ADOPTIUM
+    }
+}
+
+javafx {
+    version = '17.0.13'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    // Excel (.xlsx) reading — upgraded from the bundled POI 3.15 to a Java 17 era release.
+    implementation 'org.apache.poi:poi:5.2.5'
+    implementation 'org.apache.poi:poi-ooxml:5.2.5'
+
+    // POI 5 logs via log4j2-api. Provide the implementation so (a) the
+    // "could not find a logging implementation" StatusLogger error disappears
+    // and (b) log4j2.xml can quiet POI's benign "Skipped invalid entry
+    // /xl/sharedStrings.xml" ERROR noise (see resources/log4j2.xml).
+    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.21.1'
+}
+
+// Sources contain non-ASCII characters (report glyphs/labels); the original
+// Eclipse project compiled as UTF-8, so pin it here too (default would be the
+// Windows-949 codepage and corrupt those strings).
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    // Launcher does NOT extend Application, so the packaged (class-path) image
+    // starts without the "JavaFX runtime components are missing" error.
+    mainClass = 'snackpgx.Launcher'
+}
+
+// During `gradle run` the data dirs (resources/, gene_tables/) are read relative
+// to the project root, matching the original Java 8 behaviour.
+
+runtime {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+
+    // JDK modules baked into the bundled runtime. JavaFX is delivered as
+    // class-path jars (in app/), NOT as runtime modules, so it is intentionally
+    // absent here. Beyond what jdeps reports statically, several are required
+    // only at runtime via reflection: java.scripting (FXMLLoader's script hook —
+    // the NoClassDefFoundError that exposed this), and java.sql / java.naming
+    // (POI). Erring toward completeness for a clinical tool; jdk.localedata
+    // keeps Korean locale formatting correct.
+    modules = [
+        'java.base',
+        'java.desktop',
+        'java.logging',
+        'java.management',
+        'java.naming',
+        'java.scripting',
+        'java.sql',
+        'java.xml',
+        'java.xml.crypto',
+        'java.security.jgss',
+        'jdk.unsupported',
+        'jdk.crypto.ec',
+        'jdk.charsets',
+        'jdk.localedata'
+    ]
+
+    jpackage {
+        imageName = 'SnackPGx'
+        installerName = 'SnackPGx'
+        installerType = 'msi'
+
+        // $APPDIR resolves at runtime to the app image dir that holds the jars
+        // and the bundled resources/ + gene_tables/ folders.
+        jvmArgs = ['-Dapp.dir=$APPDIR']
+
+        installerOptions = [
+            '--description', 'PGx Report Generator',
+            '--vendor', 'SnackPGx',
+            '--win-dir-chooser',
+            '--win-menu',
+            '--win-shortcut',
+            '--win-per-user-install'
+        ]
+    }
+}
+
+// Post-process the jpackage app image:
+//  1. Copy the read-only data dirs next to the jars (resolved via -Dapp.dir=$APPDIR).
+//  2. Drop in the launcher scripts that start the SIGNED javaw.exe directly.
+//     The unsigned jpackage stub (SnackPGx.exe) is intermittently terminated by
+//     Korean endpoint AV (AhnLab V3 etc.); SnackPGx.vbs is the reliable entry point.
+tasks.named('jpackageImage') {
+    doLast {
+        def imageRoot = "$buildDir/jpackage/SnackPGx"
+        copy { from("$projectDir/resources")   into("$imageRoot/app/resources") }
+        copy { from("$projectDir/gene_tables") into("$imageRoot/app/gene_tables") }
+        copy { from("$projectDir/packaging")   into(imageRoot) }
+    }
+}

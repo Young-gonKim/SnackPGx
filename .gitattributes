@@ -1,0 +1,13 @@
+# Normalize line endings: store LF in the repo, check out native on each OS.
+* text=auto
+
+# Keep platform-correct endings for the Gradle wrapper scripts.
+*.bat        text eol=crlf
+*.cmd        text eol=crlf
+gradlew      text eol=lf
+
+# Treat binaries as binary (no EOL conversion).
+*.xlsx       binary
+*.png        binary
+*.tif        binary
+*.jar        binary

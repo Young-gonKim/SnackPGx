@@ -1,0 +1,36 @@
+SnackPGx License
+=================
+
+Copyright (c) Department of Laboratory Medicine & Genetics, Samsung Medical Center.
+All rights reserved.
+
+FREE FOR NON-COMMERCIAL USE.
+
+Permission is hereby granted, free of charge, to any person or institution to use,
+copy, and modify this software and its accompanying data files for academic,
+research, educational, and other NON-COMMERCIAL purposes, subject to the following
+conditions:
+
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the software.
+
+2. Commercial use of any kind — including, but not limited to, use in a fee-based
+   clinical/diagnostic service, sale, sublicensing, or incorporation into a
+   commercial product — is NOT permitted without a separate written agreement with
+   the copyright holder. For commercial licensing, please contact the authors.
+
+3. SnackPGx is provided for research and informational purposes. It is NOT a
+   certified in-vitro diagnostic (IVD) device. Any clinical or treatment decision
+   must be confirmed by a qualified professional and validated according to local
+   regulations.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Third-party components are distributed under their own licenses:
+  - OpenJFX (JavaFX)            : GPLv2 + Classpath Exception
+  - Apache POI, Log4j          : Apache License 2.0
+  - Eclipse Temurin / OpenJDK  : GPLv2 + Classpath Exception

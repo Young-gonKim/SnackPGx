@@ -1,0 +1,18 @@
+- COMMENTS
+1. ABCG2 encodes the BCRP efflux transporter, which affects the absorption and disposition
+   of several drugs, including rosuvastatin (and other statins), allopurinol, topotecan,
+   and sulfasalazine.
+
+2. The above results were prepared using the Gene-specific Information Tables from ClinPGx.
+   (https://www.clinpgx.org, downloaded 2026.6.3)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: ABCG2 gene on chromosome 4q22.1
+  METHOD: Next-generation sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

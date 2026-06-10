@@ -1,0 +1,40 @@
+- COMMENTS
+1. CYP2D6 is a metabolic enzyme involved in the metabolism of various drugs, including
+   antidepressants (TCAs and SSRIs), antipsychotics, antiarrhythmics, beta-blockers,
+   opioid analgesics, tamoxifen, and anticancer agents.
+
+2. In intermediate metabolizers (IM), dose reduction may need to be considered when
+   administering CYP2D6 substrate drugs in the future, and caution is advised when
+   co-administering drugs that act as CYP2D6 inhibitors; monitoring of blood drug
+   concentrations is recommended. Note that for tamoxifen, which is metabolized by
+   CYP2D6 into its active metabolite endoxifen, reduced CYP2D6 activity conversely leads
+   to decreased therapeutic effect.
+
+   CYP2D6 substrate drugs include all TCAs, SSRIs such as fluoxetine and paroxetine,
+   antipsychotics (e.g., haloperidol, risperidone), and antiarrhythmics (e.g.,
+   metoprolol, carvedilol). Strong CYP2D6 inhibitors include fluoxetine, paroxetine,
+   bupropion, and ritonavir.
+
+3. This test examines only some of the variant sites included in the major variant
+   alleles commonly found in Koreans (*5 and *10 alleles, and multiplication); if
+   necessary, additional testing for the remaining variant alleles can be performed.
+
+   In Koreans, the CYP2D6*10 allele is the most common (45%), and CYP2D6*5 is reported
+   at a frequency of 6%.
+   (Ther Drug Monit. 2006 Jun;28(3):382-7.)
+
+4. The above results were prepared using the Gene-specific Information Tables from
+   ClinPGx. (https://www.clinpgx.org/page/cyp2d6RefMaterials, downloaded 2025.10.20)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- CLINICAL INFORMATION:
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: CYP2D6 gene on chromosome 22q13.1
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

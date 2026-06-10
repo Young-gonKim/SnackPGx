@@ -1,0 +1,14 @@
+- COMMENTS
+  1. Carriers of the -1639GA or -1639GG genotype are known to require higher warfarin
+     doses than -1639AA carriers. The -1639G allele frequency in Koreans has been
+     reported as 9.7%. (* Ref. Pharmacogenomics 2007;8:329-37)
+
+  2. The above results were prepared using the Gene-specific Information Tables from
+     ClinPGx. (https://www.clinpgx.org/page/vkorc1RefMaterials, downloaded 2025.10.20)
+
+  3. Note that genetic factors not identified by this assay and non-genetic factors such
+     as drug-drug interactions may affect drug response. Therefore, comprehensive
+     interpretation of the results and determination of the application policy are required.
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.
