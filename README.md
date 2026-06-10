@@ -1,5 +1,8 @@
 # SnackPGx
 
+[![Version](https://img.shields.io/github/v/tag/Young-gonKim/SnackPGx?label=version&color=blue)](https://github.com/Young-gonKim/SnackPGx/releases)
+[![License: Non-commercial](https://img.shields.io/badge/license-non--commercial-green)](LICENSE.txt)
+
 **SnackPGx** is a desktop application for **pharmacogenetic (PGx) genotyping and clinical
 report generation** from next-generation sequencing (NGS) annotation files. It converts
 per-variant annotation tables into **star-allele diplotypes**, predicts **metabolizer
