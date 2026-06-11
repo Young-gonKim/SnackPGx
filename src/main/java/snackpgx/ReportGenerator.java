@@ -141,7 +141,7 @@ public class ReportGenerator {
 
 
 	public static String getHealthCheckUpReport(GeneContent[] geneContentArray) {
-		String conclusion = "▣ CONCLUSION AND DIAGNOSIS\nBased on the results of the 20 genes tested below, ";
+		String conclusion = "▣ CONCLUSION AND DIAGNOSIS\nBased on the results of the 17 genes tested below, ";
 		String opinion = "▣ COMMENTS\n";
 		String abnormalGeneList = "";
 		String reportedInterpretationList = "";
