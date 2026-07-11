@@ -494,8 +494,15 @@ public class RootController implements Initializable {
 		// Monospaced font so the fixed-width report tables align correctly.
 		reportArea.setFont(Font.font("Consolas", 12));
 		vBox.getChildren().clear();
+		// Print the specimen ID at the top of each single-sample view so the shown
+		// result self-identifies regardless of the Sample List selection state.
+		if(context == Context.VARIANT || context == Context.DIPLOTYPE || context == Context.REPORT) {
+			Label specimenLabel = new Label("Specimen ID: " + sample.sampleID);
+			specimenLabel.setStyle("-fx-font-family: 'Verdana'; -fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #17466e;");
+			vBox.getChildren().add(specimenLabel);
+		}
 		switch (context) {
-		case VARIANT : 
+		case VARIANT :
 			for(int i=0;i<geneMetaDataList.size();i++) {
 				if(geneMetaDataList.get(i).targeted) {
 					Label geneLabel = new Label(geneMetaDataList.get(i).name + " (" + geneMetaDataList.get(i).transcript + ")");
