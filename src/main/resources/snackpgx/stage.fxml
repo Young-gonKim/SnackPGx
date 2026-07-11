@@ -40,7 +40,6 @@
                <items>
                  <MenuItem mnemonicParsing="false" onAction="#handleQualityParameters" text="Quality Parameters" />
                  <MenuItem mnemonicParsing="false" onAction="#handleInputParameters" text="Input Parameters" />
-                 <MenuItem mnemonicParsing="false" onAction="#handleEthnicity" text="Ethnicity" />
                </items>
              </Menu>
 

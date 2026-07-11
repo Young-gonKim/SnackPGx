@@ -270,12 +270,12 @@ public class RootController implements Initializable {
 
 
 	public void readSettings() {
-		// readSettings() is called both at startup and again whenever the user
-		// changes ethnicity (handleEthnicity -> readSettings). panelNameList is a
-		// field, so it must be reset here; otherwise each re-read appends another
-		// full copy of the test rows, growing past panelInclusionList and throwing
-		// IndexOutOfBounds below (previously mis-surfaced as the "Only integers are
-		// acceptable for GRCh38Row and referenceRow" popup).
+		// readSettings() is called at startup and again for each new project once the
+		// ethnicity is chosen (chooseEthnicity -> readSettings), plus on input/quality
+		// parameter changes. panelNameList is a field, so it must be reset here;
+		// otherwise each re-read appends another full copy of the test rows, growing
+		// past panelInclusionList and throwing IndexOutOfBounds below (previously
+		// mis-surfaced as the "Only integers are acceptable ..." popup).
 		panelNameList.clear();
 		Vector<String> v_lines = new Vector<String>();
 		String fileName = resourcePath + "/settings.xlsx";
@@ -888,8 +888,6 @@ public class RootController implements Initializable {
 		if(sampleArray == null || sampleArray.length == 0)
 			return;
 
-		int prevSelected = selectedSample;   // preserve the current selection across the rebuild
-
 		Vector<Sample> tempList = new Vector<Sample>();
 		Vector<String> idList = new Vector<String>();
 		inputTypeError = false;
@@ -906,12 +904,7 @@ public class RootController implements Initializable {
 
 		sampleArray = tempList.toArray(new Sample[tempList.size()]);
 		sampleListView.setItems(FXCollections.observableArrayList(idList));
-		// Keep the same sample selected -- refresh the content in place instead of
-		// jumping to the first sample -- and sync the list highlight to match so the
-		// selection and the displayed content stay consistent.
-		int restore = (prevSelected >= 0 && prevSelected < sampleArray.length) ? prevSelected : 0;
-		selectedSample = restore;
-		sampleListView.getSelectionModel().select(restore);
+		selectedSample = sampleArray.length > 0 ? 0 : -1;
 		fillResults();
 	}
 
@@ -1044,17 +1037,18 @@ public class RootController implements Initializable {
 	}
 
 	/**
-	 * Settings > Ethnicity.
-	 * Lets the user pick which of the 9 ClinPGx biogeographic groups supplies the
-	 * allele/diplotype frequencies. Frequencies are resolved by column header at
-	 * load time, so changing the group re-reads the ClinPGx frequency tables.
-	 * Genes lacking the chosen group's column simply show blank/N-A.
+	 * Ethnicity picker shown at the start of a new project, before input files are
+	 * chosen. Blocks until answered. On Continue it records the selected ClinPGx
+	 * biogeographic group and re-reads the frequency tables so samples are parsed
+	 * against that group, and returns true; on Cancel it returns false so the caller
+	 * aborts the new project. Genes lacking the chosen group's column show blank/N-A.
 	 */
-	public void handleEthnicity() {
+	private boolean chooseEthnicity() {
 		Stage dialog = new Stage(StageStyle.DECORATED);
 		dialog.initOwner(primaryStage);
-		dialog.initModality(Modality.WINDOW_MODAL);
+		dialog.initModality(Modality.APPLICATION_MODAL);
 		dialog.setTitle("Ethnicity");
+		final boolean[] confirmed = { false };
 
 		GridPane grid = new GridPane();
 		grid.setHgap(10);
@@ -1068,30 +1062,33 @@ public class RootController implements Initializable {
 		grid.add(new Label("Biogeographic group (ClinPGx)"), 0, 0);
 		grid.add(ethnicityBox, 1, 0);
 
-		Button applyButton = new Button("Apply");
+		Button continueButton = new Button("Continue");
 		Button cancelButton = new Button("Cancel");
-		HBox buttonBox = new HBox(10, applyButton, cancelButton);
+		HBox buttonBox = new HBox(10, continueButton, cancelButton);
 		buttonBox.setAlignment(Pos.CENTER_RIGHT);
 		grid.add(buttonBox, 0, 1, 2, 1);
 
-		applyButton.setOnAction(e -> {
+		continueButton.setOnAction(e -> {
 			String chosen = ethnicityBox.getValue();
 			if(chosen == null || chosen.length() == 0) {
 				popUp("Please select a biogeographic group.");
 				return;
 			}
 			selectedEthnicity = chosen;
-			// Frequencies are read during GeneMetaData construction, so rebuild the
-			// gene metadata (re-reads the frequency tables) before re-rendering.
-			readSettings();
+			confirmed[0] = true;
 			dialog.close();
-			reloadSamples();
 		});
 		cancelButton.setOnAction(e -> dialog.close());
 
 		dialog.setScene(Ui.scene(grid));
 		dialog.setResizable(false);
-		dialog.show();
+		dialog.showAndWait();
+
+		// Re-read the frequency tables for the chosen group before any samples are
+		// parsed, so diplotype/allele frequencies reflect the selection.
+		if(confirmed[0])
+			readSettings();
+		return confirmed[0];
 	}
 
 	/**
@@ -1214,6 +1211,11 @@ public class RootController implements Initializable {
 	 * Open forward trace file and opens trim.fxml with that file
 	 */
 	public void handleNewProject() {
+
+		// Choose the biogeographic group up front -- before input files -- so samples
+		// are parsed against the right ClinPGx frequency tables. Cancel aborts.
+		if(!chooseEthnicity())
+			return;
 
 		File tempFile2 = new File(lastVisitedDir);
 		if(!tempFile2.exists())
