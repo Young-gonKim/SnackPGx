@@ -908,6 +908,17 @@ public class RootController implements Initializable {
 		fillResults();
 	}
 
+	/** Clears every loaded sample and the results view. Used when switching the
+	 *  input format, which is incompatible with samples parsed under the old one. */
+	private void unloadAllSamples() {
+		sampleArray = new Sample[0];
+		selectedSample = -1;
+		sampleListView.setItems(FXCollections.observableArrayList());
+		// fillResults() short-circuits when selectedSample == -1 without touching the
+		// view, so clear the results container explicitly.
+		vBox.getChildren().clear();
+	}
+
 	/**
 	 * Editable variants-table cell that renders its entire row in red font when the
 	 * row's variant is a lower-confidence call (QUAL &lt; Variant.QUAL_red_threshold).
@@ -1162,6 +1173,24 @@ public class RootController implements Initializable {
 				return;
 			}
 
+			// Changing the input column-mapping while samples are loaded would try to
+			// re-parse the loaded files under the new format and fail with a confusing
+			// "check input file type" error (e.g. WGS samples under panel settings).
+			// Instead, warn that switching formats unloads all samples and confirm.
+			boolean formatChanging = !selectedPath.equals(inputSettingsPath);
+			boolean samplesLoaded = sampleArray != null && sampleArray.length > 0;
+			if(formatChanging && samplesLoaded) {
+				boolean proceed = confirm("Changing the input format requires unloading all "
+						+ "currently loaded samples.\n\nDo you want to continue?");
+				if(!proceed)
+					return;   // leave the dialog open; keep the current format and samples
+				inputSettingsPath = selectedPath;
+				readInputSettings();
+				unloadAllSamples();
+				dialog.close();
+				return;
+			}
+
 			inputSettingsPath = selectedPath;
 			readInputSettings();
 			dialog.close();
@@ -1294,6 +1323,35 @@ public class RootController implements Initializable {
 		catch(Exception ex) {
 			ex.printStackTrace();
 		}
+	}
+
+	/** Modal yes/no confirmation. Blocks until the user answers and returns true
+	 *  only when they choose Continue. */
+	public boolean confirm(String message) {
+		Stage dialog = new Stage(StageStyle.DECORATED);
+		dialog.initOwner(primaryStage);
+		dialog.initModality(Modality.APPLICATION_MODAL);
+		dialog.setTitle("Notice");
+		final boolean[] result = { false };
+
+		VBox root = new VBox(15);
+		root.setPadding(new Insets(20));
+		Label messageLabel = new Label(message);
+		messageLabel.setWrapText(true);
+		messageLabel.setMaxWidth(360);
+
+		Button continueButton = new Button("Continue");
+		Button cancelButton = new Button("Cancel");
+		continueButton.setOnAction(e -> { result[0] = true;  dialog.close(); });
+		cancelButton.setOnAction(e ->   { result[0] = false; dialog.close(); });
+		HBox buttonBox = new HBox(10, continueButton, cancelButton);
+		buttonBox.setAlignment(Pos.CENTER_RIGHT);
+
+		root.getChildren().addAll(messageLabel, buttonBox);
+		dialog.setScene(Ui.scene(root));
+		dialog.setResizable(false);
+		dialog.showAndWait();
+		return result[0];
 	}
 
 
