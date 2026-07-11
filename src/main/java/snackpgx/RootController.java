@@ -888,6 +888,8 @@ public class RootController implements Initializable {
 		if(sampleArray == null || sampleArray.length == 0)
 			return;
 
+		int prevSelected = selectedSample;   // preserve the current selection across the rebuild
+
 		Vector<Sample> tempList = new Vector<Sample>();
 		Vector<String> idList = new Vector<String>();
 		inputTypeError = false;
@@ -904,7 +906,12 @@ public class RootController implements Initializable {
 
 		sampleArray = tempList.toArray(new Sample[tempList.size()]);
 		sampleListView.setItems(FXCollections.observableArrayList(idList));
-		selectedSample = sampleArray.length > 0 ? 0 : -1;
+		// Keep the same sample selected -- refresh the content in place instead of
+		// jumping to the first sample -- and sync the list highlight to match so the
+		// selection and the displayed content stay consistent.
+		int restore = (prevSelected >= 0 && prevSelected < sampleArray.length) ? prevSelected : 0;
+		selectedSample = restore;
+		sampleListView.getSelectionModel().select(restore);
 		fillResults();
 	}
 
