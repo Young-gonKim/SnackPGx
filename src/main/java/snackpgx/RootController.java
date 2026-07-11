@@ -270,6 +270,13 @@ public class RootController implements Initializable {
 
 
 	public void readSettings() {
+		// readSettings() is called both at startup and again whenever the user
+		// changes ethnicity (handleEthnicity -> readSettings). panelNameList is a
+		// field, so it must be reset here; otherwise each re-read appends another
+		// full copy of the test rows, growing past panelInclusionList and throwing
+		// IndexOutOfBounds below (previously mis-surfaced as the "Only integers are
+		// acceptable for GRCh38Row and referenceRow" popup).
+		panelNameList.clear();
 		Vector<String> v_lines = new Vector<String>();
 		String fileName = resourcePath + "/settings.xlsx";
 		File file = new File(fileName);
