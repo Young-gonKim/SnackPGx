@@ -7,8 +7,8 @@ authors:
     given-names: Young-gon
     affiliation: "Department of Laboratory Medicine and Genetics, Samsung Medical Center, Sungkyunkwan University School of Medicine"
     orcid: "https://orcid.org/0000-0001-6840-6830"
-version: "1.0.0"
-date-released: "2026-06-11"
+version: "1.1.0"
+date-released: "2026-07-11"
 license-url: "https://github.com/Young-gonKim/SnackPGx/blob/main/LICENSE.txt"
 repository-code: "https://github.com/Young-gonKim/SnackPGx"
 url: "https://github.com/Young-gonKim/SnackPGx"

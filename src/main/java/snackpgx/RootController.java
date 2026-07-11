@@ -69,7 +69,7 @@ public class RootController implements Initializable {
 	// Input column-mapping file (sheet index 1). Selectable via Settings > Input Parameters.
 	private String inputSettingsPath = resourcePath + "/settings.xlsx";
 
-	public static String version = "1.0";
+	public static String version = "1.1.0";
 	public static String DBversion = "2026.05.31";
 
 	//update history : see UPDATE_HISTORY.txt

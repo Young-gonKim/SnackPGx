@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'snackpgx'
-version = '1.0.0'
+version = '1.1.0'
 
 // The project lives inside a Google Drive synced folder, which intermittently
 // locks files under build/ (causing "Unable to delete directory"). Redirect all
