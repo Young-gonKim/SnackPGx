@@ -1,0 +1,18 @@
+- COMMENTS
+1. CYP3A4 is a major drug-metabolizing enzyme involved in the metabolism of a large number
+   of drugs, including tacrolimus, statins (atorvastatin, simvastatin), calcium-channel
+   blockers, benzodiazepines (e.g., midazolam), and many anticancer and CNS agents.
+
+2. The above results were prepared using the Gene-specific Information Tables from ClinPGx.
+   (https://www.clinpgx.org, downloaded 2026.6.3)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: CYP3A4 gene on chromosome 7q22.1
+  METHOD: Next-generation sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

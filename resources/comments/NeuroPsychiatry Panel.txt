@@ -1,0 +1,18 @@
+<COMMENTS>
+1. The above results were prepared using the Gene-specific Information Tables from ClinPGx.
+   (https://www.clinpgx.org, downloaded 2026.6.3)
+2. Genetic factors not identified by this assay and non-genetic factors such as drug-drug
+   interactions may affect drug response, so comprehensive interpretation of the results and
+   determination of the application policy are required, and therapeutic drug monitoring may be
+   helpful during treatment.
+3. For drug- and genotype-specific dosing recommendations, refer to the CPIC guidelines
+   (https://cpicpgx.org/guidelines/).
+
+▣ TEST INFORMATION AND FINDINGS
+SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+SEQUENCING METHOD: Next-generation sequencing on Illumina NovaSeq
+REFERENCE GENOME: hg38/GRCh38
+TARGET GENES: CYP2D6, CYP2C19, CYP2B6, CYP2C9, CYP3A4, CYP3A5
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

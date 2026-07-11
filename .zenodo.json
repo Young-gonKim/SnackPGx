@@ -1,0 +1,24 @@
+{
+  "title": "SnackPGx: pharmacogenetic genotyping and clinical report generation from NGS data",
+  "description": "SnackPGx is a desktop application for pharmacogenetic (PGx) genotyping and clinical report generation from next-generation sequencing (NGS) annotation files. It converts per-variant annotation tables into star-allele diplotypes by minimum Jaccard distance, predicts metabolizer phenotypes, and produces ready-to-use clinical reports for individual genes and disease-area test panels. Allele definitions, functional status, diplotype-phenotype mappings, and population allele frequencies are taken from the gene-specific tables provided by ClinPGx/PharmGKB and CPIC. Runs on Windows, macOS, and Linux (Java 17 / JavaFX).",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Kim, Young-gon",
+      "affiliation": "Department of Laboratory Medicine and Genetics, Samsung Medical Center, Sungkyunkwan University School of Medicine",
+      "orcid": "0000-0001-6840-6830"
+    }
+  ],
+  "keywords": [
+    "pharmacogenetics",
+    "pharmacogenomics",
+    "star allele",
+    "diplotype",
+    "metabolizer phenotype",
+    "CPIC",
+    "PharmGKB",
+    "ClinPGx",
+    "clinical reporting",
+    "next-generation sequencing"
+  ]
+}

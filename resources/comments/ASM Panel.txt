@@ -1,0 +1,15 @@
+-  COMMENTS
+   The above results were prepared using the Gene-specific Information Tables
+   from ClinPGx. (https://www.clinpgx.org/page/cyp2c19RefMaterials, downloaded 2025.10.20)
+
+   Note that genetic factors not identified by this assay and non-genetic factors such as
+   drug-drug interactions may affect drug response. Therefore, comprehensive interpretation
+   of the results and determination of the application policy are required, and therapeutic
+   drug monitoring is recommended during medication.
+
+▣ TEST INFORMATION AND FINDINGS
+
+SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+SEQUENCING METHOD: Next-generation sequencing on Illumina NovaSeq
+REFERENCE GENOME: hg38/GRCh38
+TARGET GENES: CYP2C9, CYP2C19, HLA-A(*31:01), HLA-B(*15:02, *15:11)

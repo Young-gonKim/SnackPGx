@@ -1,0 +1,32 @@
+- COMMENTS
+  1. The NAT2 enzyme acts on the metabolism of various drugs, including isoniazid, and
+     carcinogens, reducing or increasing their toxicity. Therefore, NAT2 genetic
+     polymorphism determines individual susceptibility to drugs and carcinogens.
+
+  2. Anti-tuberculosis drug-induced hepatotoxicity is closely related to NAT2 activity.
+     In slow acetylators, the odds ratio for hepatotoxicity has been reported as 3.73
+     compared with rapid or intermediate acetylators.
+     (Int J Tuberc Lung Dis. 2012)
+     Because intermediate acetylators also have lower-than-normal enzyme activity,
+     follow-up monitoring of hepatic function and consideration of dose reduction are
+     recommended.
+
+  3. The *4, *6, and *7 allele frequencies commonly found in Koreans are 0.657, 0.201,
+     and 0.115, respectively. (Clin Chem 2002)
+
+  4. The above results were prepared using the Named Alleles data from ClinPGx.
+     (https://www.clinpgx.org/gene/PA18/haplotype, accessed 2024.3.12)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- CLINICAL INFORMATION:
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: NAT2
+  TARGET ALLELES: *4, *5, *6, *7, *14
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

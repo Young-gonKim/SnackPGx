@@ -1,0 +1,17 @@
+- COMMENTS
+1. CYP4F2 is an enzyme involved in vitamin K metabolism and contributes, together with
+   CYP2C9 and VKORC1, to interindividual variability in warfarin dose requirement.
+
+2. The above results were prepared using the Gene-specific Information Tables from ClinPGx.
+   (https://www.clinpgx.org, downloaded 2026.6.3)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: CYP4F2 gene on chromosome 19p13.12
+  METHOD: Next-generation sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

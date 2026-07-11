@@ -1,0 +1,162 @@
+SnackPGx Source-Available, Non-Commercial License
+Version 1.0
+
+This is a source-available license. It is not an OSI-approved open source
+license. Use for academic and other non-commercial purposes is free, subject to
+the terms below. Commercial use requires a separate, written, paid agreement
+with the Licensor. No patent license is granted by this license. See Sections
+3, 4, and 7.
+
+Copyright (c) 2026 사회복지법인 삼성생명공익재단 (Samsung Life Public Welfare
+Foundation), which operates Samsung Medical Center. All rights reserved.
+
+Related patent application (pending): KR 10-2025-0022666
+("METHOD, APPARATUS, AND COMPUTER PROGRAM FOR PERSONALIZED PHARMACOGENETIC
+ANALYSIS").
+
+------------------------------------------------------------
+1. DEFINITIONS
+------------------------------------------------------------
+1.1 "Licensor" means the copyright holder identified above.
+1.2 "Software" means the SnackPGx source code, object code, and accompanying
+    materials made available by the Licensor under this License.
+1.3 "You" (or "Your") means the individual or legal entity exercising rights
+    under this License.
+1.4 "Non-Commercial Use" means use for academic research, teaching, personal
+    study, evaluation, or other use NOT primarily intended for or directed
+    toward commercial advantage or monetary compensation. Use by or on behalf
+    of a for-profit entity in the ordinary course of its business, use to
+    provide a paid service, and use in routine fee-generating clinical or
+    diagnostic testing are NOT Non-Commercial Use.
+1.5 "Commercial Use" means any use that is not Non-Commercial Use.
+1.6 "Patent Rights" means any patent or patent application owned or
+    controlled by the Licensor, including the application identified above and
+    any continuations, divisionals, and foreign counterparts.
+
+------------------------------------------------------------
+2. COPYRIGHT LICENSE GRANT (NON-COMMERCIAL ONLY)
+------------------------------------------------------------
+Subject to the terms of this License, the Licensor grants You a worldwide,
+royalty-free, non-exclusive, non-transferable, non-sublicensable, revocable
+copyright license to, FOR NON-COMMERCIAL USE ONLY:
+  (a) use and run the Software;
+  (b) reproduce the Software;
+  (c) create modifications and derivative works of the Software; and
+  (d) redistribute the Software and Your modifications,
+provided that You comply with Sections 5 and 6.
+
+No rights are granted for Commercial Use under this License; see Section 4.
+
+------------------------------------------------------------
+3. PATENT RIGHTS
+------------------------------------------------------------
+3.1 No license to any Patent Rights is granted under this License, whether
+    expressly, by implication, by estoppel, or otherwise.
+3.2 The Licensor expressly reserves all Patent Rights. Nothing in the distribution of the Software shall be construed as granting, by implication or otherwise, any license or right to practice any Patent Rights.
+3.3 Any practice of the Patent Rights, including in connection with Commercial
+    Use, requires a separate written patent license from the Licensor
+    (Section 4).
+3.4 Scope of the distributed Software. The Software as distributed by the
+    Licensor performs only post-sequencing interpretation: it derives
+    star-allele diplotypes and phenotypes from an input list of already-called
+    sequence variants and generates clinical text reports, using user-supplied
+    allele-definition, allele-function, allele-frequency, and
+    diplotype-phenotype tables. The distributed Software does NOT implement, and is not capable of performing, the methods that constitute the part of the Patent’s subject matter, including:
+      (i)   detection and classification of copy-number or structural variants
+            (e.g., deletion, duplication, or hybrid) from normalized
+            sequencing-depth profiles using a trained machine-learning or
+            artificial-intelligence model;
+      (ii)  training or use of such a model on population-specific (e.g., East
+            Asian or Korean) copy-number or structural-variant patterns;
+      (iii) combination of a copy-number or structural-variant result with a
+            sequence-variant-based genotype to derive a final genotype;
+      (iv)  conditional-probability or population-frequency-based ranking of
+            multiple candidate genotypes to resolve ambiguity; and
+      (v)   HLA-A or HLA-B typing, including any fallback determination of
+            specified HLA alleles when typing is inconclusive.
+    Accordingly, ordinary Non-Commercial Use of the Software in its unmodified,
+    distributed form is governed by the copyright license in Section 2. This
+    Section 3.4 is a clarification of the scope of the distributed Software
+    only; it is not a grant of, or license to, any Patent Rights, all of which
+    remain reserved under Sections 3.1-3.3.
+
+------------------------------------------------------------
+4. COMMERCIAL USE — SEPARATE PAID AGREEMENT REQUIRED
+------------------------------------------------------------
+Commercial Use of the Software, and any practice of the Patent Rights, is
+permitted ONLY under a separate written agreement with the Licensor, which may
+include the payment of fees or royalties on terms set by the Licensor. To
+request a commercial and/or patent license, contact the technology transfer
+office of Samsung Medical Center:
+
+    Samsung Medical Center (attn: 기술사업화팀 / Technology Commercialization Team)
+    81 Irwon-ro, Gangnam-gu, Seoul 06351, Republic of Korea
+
+------------------------------------------------------------
+5. CONDITIONS OF REDISTRIBUTION
+------------------------------------------------------------
+If You redistribute the Software or any modification or derivative work, You
+must:
+  (a) do so only for Non-Commercial Use and only under the terms of this
+      License (You may not relicense, including under any OSI open source
+      license, and may not remove these restrictions);
+  (b) retain all copyright, patent, and attribution notices and this License
+      in full;
+  (c) include a prominent notice that the files have been changed and the date
+      of change; and
+  (d) not impose any further restrictions inconsistent with this License.
+
+------------------------------------------------------------
+6. ATTRIBUTION
+------------------------------------------------------------
+Publications or presentations that use results produced with the Software
+should cite the corresponding SnackPGx publication.
+
+------------------------------------------------------------
+7. RESEARCH USE ONLY — CLINICAL / MEDICAL DISCLAIMER
+------------------------------------------------------------
+The Software is provided for research and informational purposes only. It is
+NOT a medical device, is NOT validated or approved for in-vitro diagnostic or
+clinical use, and must NOT be used as a sole basis for clinical or therapeutic
+decisions. Any clinical or diagnostic application requires independent
+validation and any applicable regulatory clearance, for which the user is
+solely responsible.
+
+------------------------------------------------------------
+8. NO WARRANTY
+------------------------------------------------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.
+
+------------------------------------------------------------
+9. LIMITATION OF LIABILITY
+------------------------------------------------------------
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE LICENSOR BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT,
+OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR ITS
+USE.
+
+------------------------------------------------------------
+10. TERMINATION
+------------------------------------------------------------
+The license granted in Section 2 terminates automatically if You
+materially breach this License and fail to cure that breach within 30 days
+after becoming aware of it. In addition, the Licensor reserves the right to
+revoke or terminate the license granted in Section 2, in whole or in part and
+at its sole discretion, effective 30 days after the Licensor provides written
+or public notice of revocation. Upon termination or revocation, You must cease
+all use of the Software and destroy all copies in Your possession or control.
+Sections 1, 3, 4, 7, 8, 9, and 11 survive termination or revocation.
+
+------------------------------------------------------------
+11. GOVERNING LAW
+------------------------------------------------------------
+This License is governed by the laws of the Republic of Korea, without regard
+to conflict-of-laws principles. The courts located in Seoul, Republic of Korea
+shall have non-exclusive jurisdiction over any dispute arising under this
+License.
+
+============================================================
+END OF LICENSE
+============================================================

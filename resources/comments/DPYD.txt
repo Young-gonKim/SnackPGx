@@ -1,0 +1,18 @@
+- COMMENTS
+1. DPYD encodes dihydropyrimidine dehydrogenase (DPD), the rate-limiting enzyme in the
+   catabolism of the fluoropyrimidine drugs 5-fluorouracil (5-FU), capecitabine, and
+   tegafur.
+
+2. The above results were prepared using the Gene-specific Information Tables from ClinPGx.
+   (https://www.clinpgx.org, downloaded 2026.6.3)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: DPYD gene on chromosome 1p21.3
+  METHOD: Next-generation sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

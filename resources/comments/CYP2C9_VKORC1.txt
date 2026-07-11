@@ -1,0 +1,28 @@
+- COMMENTS
+  1. The CYP2C9 and VKORC1 genotypes are major genetic determinants that can explain
+     30-50% of the inter-individual variability in warfarin dose requirement.
+
+  2. In Koreans, the CYP2C9 *1 and *3 allele frequencies are known to be 0.934 and 0.060,
+     respectively, and the VKORC1 1173C allele frequency in Koreans has been reported as
+     0.097.
+     (Ref. Br J Clin Pharmacol 2005;60:418-22, Pharmacogenomics 2007;8:329-37)
+
+  3. The above results were prepared using the Gene-specific Information Tables from
+     ClinPGx. (https://www.clinpgx.org/page/cyp2c9RefMaterials,
+     https://www.clinpgx.org/page/vkorc1RefMaterials, downloaded 2025.10.20)
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- CLINICAL INFORMATION:
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  ANALYZED GENE: CYP2C9 & VKORC1
+  TARGET ALLELES: CYP2C9 (*2, *3, *4, *5, *6, *8, *9, *11, *12, *13, *14, *15, *16, *23,
+                          *25, *26, *28, *29, *30, *31, *33, *42, *55)
+                  VKORC1 (c.1173T/C)
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

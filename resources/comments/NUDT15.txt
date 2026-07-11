@@ -1,0 +1,34 @@
+- COMMENTS
+1. NUDT15 is an enzyme involved in the conversion of cytotoxic thioguanine triphosphate
+   into non-toxic thioguanine monophosphate. Enzyme activity is determined by NUDT15
+   genetic polymorphism.
+
+2. In patients carrying variant alleles that reduce NUDT15 enzyme activity, adverse
+   effects such as early-onset leukopenia have been reported to be common when using
+   related drugs such as azathioprine, 6-mercaptopurine, and thioguanine. Therefore, for
+   intermediate metabolizers, dose reduction to 30-80% is recommended, and for poor
+   metabolizers, dosing below 10% or substitution with another drug is recommended.
+   (Ref. Clin Pharmacol Ther. 2019 May;105(5):1095-1105)
+
+3. The NUDT15 *1, *2, *3, *4, *5, and *6 allele frequencies in Koreans are reported as
+   86.7%, 4.4%, 6.9%, 0.4%, 1.1%, and 0.5%, respectively.
+   (Ref. Pharmacogenet Genomics. 2017 May;27(5):197-200)
+
+4. The above results were prepared using the Gene-specific Information Tables from
+   ClinPGx. (https://www.clinpgx.org/page/nudt15RefMaterials, downloaded 2025.10.20)
+
+5. Note that genetic factors not identified by this assay and non-genetic factors such
+   as drug-drug interactions may affect drug response. Therefore, comprehensive
+   interpretation of the results and determination of the application policy are required.
+
+
+▣ TEST INFORMATION AND FINDINGS
+
+- TEST INFORMATION
+  SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
+  TARGET ALLELES: *2, *3, *4, *5, *6, *7, *8, *9, *10, *11, *12, *13, *14, *15, *16,
+                  *17, *18, *19, *20
+  METHOD: Sequencing
+
+* This test was developed and its performance characteristics determined by the
+  Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.

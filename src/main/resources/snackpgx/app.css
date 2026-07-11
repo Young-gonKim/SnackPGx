@@ -1,0 +1,41 @@
+/*
+ * Global UI typeface for SnackPGx. Applied to every Scene via Ui.scene(...).
+ * Verdana is chosen for on-screen legibility, with Calibri / Segoe UI as
+ * fall-backs on systems without Verdana.
+ *
+ * The report TextArea is intentionally NOT targeted here: it keeps its
+ * monospaced font (Consolas, set in code) so column-aligned report text
+ * stays aligned.
+ */
+.root {
+    -fx-font-family: "Verdana", "Calibri", "Segoe UI", "Helvetica", sans-serif;
+    -fx-font-size: 12px;
+}
+
+/*
+ * Explicitly force the family on controls whose text does not reliably
+ * inherit the root font: TableView cell + header text, ListView cell text,
+ * and the dynamically created buttons/labels.
+ */
+.label,
+.button,
+.toggle-button,
+.radio-button,
+.check-box,
+.menu-bar,
+.menu,
+.menu-item,
+.text-field,
+.table-view,
+.table-view .column-header .label,
+.table-view .column-header-background .label,
+.table-cell,
+.list-view,
+.list-cell {
+    -fx-font-family: "Verdana", "Calibri", "Segoe UI", "Helvetica", sans-serif;
+}
+
+.table-cell,
+.list-cell {
+    -fx-font-size: 12px;
+}
