@@ -63,8 +63,8 @@ NAT2, NUDT15, SLCO1B1, TPMT, UGT1A1, VKORC1.
 | NeuroPsychiatry | CYP2B6, CYP2C9, CYP2C19, CYP2D6, CYP3A4, CYP3A5 |
 | Anti-seizure medication (ASM) | CYP2C9, CYP2C19 |
 
-**Single-gene reports:** available for **each of the 15 genes** (and additionally for MTHFR
-and a combined UGT1A1 + DPYD test).
+**Single-gene reports:** available for **each of the 15 genes** (and a combined
+UGT1A1 + DPYD test).
 
 > ⚠️ The **Health Checkup** and **Anti-seizure medication** reports also include
 > **HLA-A / HLA-B** risk-allele rows (e.g., HLA-A\*31:01, HLA-B\*15:02). These results come

@@ -10,7 +10,7 @@
 SPECIMEN: Genomic DNA isolated from peripheral blood leukocytes
 SEQUENCING METHOD: Next-generation sequencing on Illumina NovaSeq
 REFERENCE GENOME: hg38/GRCh38
-TARGET GENES: UGT1A1, DPYD, TPMT, NUDT15, CYP2D6, MTHFR
+TARGET GENES: UGT1A1, DPYD, TPMT, NUDT15, CYP2D6
 
 * This test was developed and its performance characteristics determined by the
   Dept. of Laboratory Medicine & Genetics, Samsung Medical Center.
