@@ -905,6 +905,9 @@ public class RootController implements Initializable {
 		sampleArray = tempList.toArray(new Sample[tempList.size()]);
 		sampleListView.setItems(FXCollections.observableArrayList(idList));
 		selectedSample = sampleArray.length > 0 ? 0 : -1;
+		// Keep the list highlight on the shown sample so it can't lag on a stale row.
+		if(selectedSample >= 0)
+			sampleListView.getSelectionModel().clearAndSelect(selectedSample);
 		fillResults();
 	}
 
@@ -1285,8 +1288,12 @@ public class RootController implements Initializable {
 			sampleArray[cnt++] = sample;
 		}
 
-		sampleListView.setItems(FXCollections.observableArrayList(idList));	
+		sampleListView.setItems(FXCollections.observableArrayList(idList));
 		selectedSample = 0;
+		// Reset the list highlight to the first (shown) sample; otherwise a stale
+		// selection index from a previous project lingers on a different row than the
+		// displayed content (the views do not print the specimen ID).
+		sampleListView.getSelectionModel().clearAndSelect(0);
 		fillResults();
 	}
 
