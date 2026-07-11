@@ -120,5 +120,12 @@ tasks.named('jpackageImage') {
         copy { from("$projectDir/resources")   into("$imageRoot/app/resources") }
         copy { from("$projectDir/gene_tables") into("$imageRoot/app/gene_tables") }
         copy { from("$projectDir/packaging")   into(imageRoot) }
+        // Bundle the public example inputs (DRY WGS + RM reference samples) so users
+        // can try the app immediately. Clinical/ holds patient data and is excluded.
+        copy {
+            from("$projectDir/input files")
+            into("$imageRoot/input files")
+            exclude "Clinical/**"
+        }
     }
 }
