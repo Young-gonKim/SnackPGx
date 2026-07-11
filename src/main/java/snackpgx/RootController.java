@@ -1295,12 +1295,18 @@ public class RootController implements Initializable {
 			sampleArray[cnt++] = sample;
 		}
 
+		// New project: reset the report/target test to the default (HealthCheckup,
+		// panel 0) so the Report view follows -- readSettings() already reset the
+		// target genes to the full default set -- and reset the view to the first
+		// radio (Variants).
+		selectedPanel = 0;
 		sampleListView.setItems(FXCollections.observableArrayList(idList));
 		selectedSample = 0;
 		// Reset the list highlight to the first (shown) sample; otherwise a stale
 		// selection index from a previous project lingers on a different row than the
 		// displayed content (the views do not print the specimen ID).
 		sampleListView.getSelectionModel().clearAndSelect(0);
+		variantRadio.setSelected(true);
 		fillResults();
 	}
 
