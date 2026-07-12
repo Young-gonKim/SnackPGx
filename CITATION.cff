@@ -9,6 +9,14 @@ authors:
     orcid: "https://orcid.org/0000-0001-6840-6830"
 version: "1.1.0"
 date-released: "2026-07-11"
+doi: "10.5281/zenodo.20637276"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20637276"
+    description: "Concept DOI - always resolves to the latest version"
+  - type: doi
+    value: "10.5281/zenodo.21310394"
+    description: "Version 1.1.0"
 license-url: "https://github.com/Young-gonKim/SnackPGx/blob/main/LICENSE.txt"
 repository-code: "https://github.com/Young-gonKim/SnackPGx"
 url: "https://github.com/Young-gonKim/SnackPGx"

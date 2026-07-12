@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/github/v/tag/Young-gonKim/SnackPGx?label=version&color=blue)](https://github.com/Young-gonKim/SnackPGx/releases)
 [![License: Non-commercial](https://img.shields.io/badge/license-non--commercial-green)](LICENSE.txt)
-<!-- DOI-BADGE: add Zenodo concept-DOI badge here after minting -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20637276.svg)](https://doi.org/10.5281/zenodo.20637276)
 
 **SnackPGx** is a desktop application for **pharmacogenetic (PGx) genotyping and clinical
 report generation** from next-generation sequencing (NGS) annotation files. It converts
@@ -231,8 +231,7 @@ replace the ClinPGx `.xlsx` files in `gene_tables/`.
 ## Citation
 If you use SnackPGx in your research, please cite the archived release:
 
-<!-- CITATION-DOI: after minting, replace ZENODO_CONCEPT_DOI with the "Cite all versions" concept DOI -->
-> Kim, Young-gon. *SnackPGx: pharmacogenetic genotyping and clinical report generation from NGS data*. Zenodo. https://doi.org/ZENODO_CONCEPT_DOI
+> Kim, Young-gon. *SnackPGx: pharmacogenetic genotyping and clinical report generation from NGS data*. Zenodo. https://doi.org/10.5281/zenodo.20637276
 
 A machine-readable [`CITATION.cff`](CITATION.cff) is included, so GitHub's **"Cite this repository"** button can generate APA/BibTeX automatically. The DOI above is the **concept DOI**, which always resolves to the latest version; each release also has its own version-specific DOI.
 
